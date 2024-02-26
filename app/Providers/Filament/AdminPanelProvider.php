@@ -26,7 +26,7 @@ class AdminPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('admin')
-            ->path('admin')
+            ->path('back')
             ->login(Login::class)
             ->colors([
                 'danger' => Color::Rose,
@@ -35,6 +35,9 @@ class AdminPanelProvider extends PanelProvider
                 'primary' => Color::Indigo,
                 'success' => Color::Emerald,
                 'warning' => Color::Orange,
+            ])
+            ->plugins([
+                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')

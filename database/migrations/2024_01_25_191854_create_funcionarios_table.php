@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('funcionarios', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('nome')->unique();
-            $table->foreignUuid('user_id')->unique()->nullable()->constrained('users')->nullOnDelete();
+            $table->foreignId('user_id')->unique()->nullable()->constrained('users')->nullOnDelete();
             $table->foreignUuid('setor_id')->required()->constrained('setores');
             $table->string('rgf')->unique();
             $table->timestamps();
