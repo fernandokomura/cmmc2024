@@ -24,7 +24,7 @@ class ParlamentarResource extends Resource
 {
     protected static ?string $model = Parlamentar::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-user-group';
+    protected static ?string $navigationIcon = 'heroicon-o-user';
 
     protected static ?string $slug = 'parlamentares';
 
@@ -33,6 +33,11 @@ class ParlamentarResource extends Resource
     protected static ?string $modelLabel = 'Parlamentar';
 
     protected static ?string $pluralModelLabel = 'Parlamentares';
+
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Parlamentar';
+    }
 
     public static function form(Form $form): Form
     {

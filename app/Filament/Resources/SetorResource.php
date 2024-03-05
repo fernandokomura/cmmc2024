@@ -19,7 +19,7 @@ class SetorResource extends Resource
 {
     protected static ?string $model = Setor::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-user-group';
+    protected static ?string $navigationIcon = 'heroicon-o-squares-2x2';
 
     protected static ?string $slug = 'setores';
 
@@ -28,6 +28,11 @@ class SetorResource extends Resource
     protected static ?string $modelLabel = 'Setor';
 
     protected static ?string $pluralModelLabel = 'Setores';
+
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Câmara';
+    }
 
     public static function form(Form $form): Form
     {
@@ -76,6 +81,7 @@ class SetorResource extends Resource
                 //
             ])
             ->actions([
+                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])

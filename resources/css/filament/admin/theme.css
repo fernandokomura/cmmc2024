@@ -1,3 +1,13 @@
 @import '/vendor/filament/filament/resources/css/theme.css';
 
 @config 'tailwind.config.js';
+
+.fi-main-ctn{
+    background-color: lightgray;
+}
+
+
+.fi-sidebar{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+}
+

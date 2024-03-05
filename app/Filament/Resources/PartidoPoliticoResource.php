@@ -28,6 +28,11 @@ class PartidoPoliticoResource extends Resource
 
     protected static ?string $pluralModelLabel = 'Partidos Políticos';
 
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Parlamentar';
+    }
+
     public static function form(Form $form): Form
     {
         return $form
