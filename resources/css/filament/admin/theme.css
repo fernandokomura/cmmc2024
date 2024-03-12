@@ -6,6 +6,10 @@
     background-color: lightgray;
 }
 
+.fi-topbar{
+    box-shadow: rgba(0, 0, 0, 0.35) 15px 5px 15px !important;
+}
+
 
 .fi-sidebar{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
