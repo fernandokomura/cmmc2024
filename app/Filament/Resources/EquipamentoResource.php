@@ -7,6 +7,7 @@ use App\Filament\Resources\EquipamentoResource\RelationManagers;
 use App\Models\Equipamento;
 use Filament\Forms;
 use Filament\Forms\Components\KeyValue;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -39,7 +40,6 @@ class EquipamentoResource extends Resource
                     ->schema(static::getForm())
                     ->columns(2)
                     ->columnSpan(['lg' => fn (?Equipamento $record) => $record === null ? 3 : 2]),
-
                 Forms\Components\Section::make()
                     ->schema([
                         Forms\Components\Placeholder::make('created_at')
@@ -52,6 +52,26 @@ class EquipamentoResource extends Resource
                     ])
                     ->columnSpan(['lg' => 1])
                     ->hidden(fn (?Equipamento $record) => $record === null),
+
+                Forms\Components\Section::make()
+                    ->schema([
+                        Repeater::make('atributos')
+                        ->schema([
+                            TextInput::make('nome')
+                                ->required()
+                                ->label('Nome'),
+                            TextInput::make('valor')
+                                ->required()
+                                ->label('Valor'),
+                        ])
+                        ->addActionLabel('Adicionar Atributo')
+                        ->defaultItems(0)
+                        ->columns(2)
+                        ->columnSpan(['lg' => fn (?Equipamento $record) => $record === null ? 3 : 2]),
+                    ])
+                    ->columnSpan(['lg' => fn (?Equipamento $record) => $record === null ? 3 : 2]),
+
+
             ])
             ->columns(3);
     }
@@ -93,8 +113,8 @@ class EquipamentoResource extends Resource
                 ->label('Patrimônio'),
             Textarea::make('observacao')
                 ->label('Observação'),
-            KeyValue::make('atributos')
-                ->addActionLabel('Adicionar Atributo'),
+            // KeyValue::make('atributos')
+            //     ->addActionLabel('Adicionar Atributo'),
         ];
     }
 

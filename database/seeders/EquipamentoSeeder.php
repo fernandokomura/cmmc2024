@@ -17,19 +17,19 @@ class EquipamentoSeeder extends Seeder
             'descricao' => 'Computador Concordia',
             'patrimonio' => '0001',
             'observacao' => 'Computador Concordia - adquirido em 2023',
-            'atributos' => ['cor' => 'preto', 'Office' => '2021', 'usuário' => 'adm.drh.e01'],
+            'atributos' => [['atributo' => 'cor','valor' => 'preto'], ['atributo' => 'Office','valor' => '2021'], ['atributo' => 'usuário','valor' => 'adm.drh.e01']],
         ],
         [
             'descricao' => 'Computador Concordia',
             'patrimonio' => '0002',
             'observacao' => 'Computador Concordia - adquirido em 2023',
-            'atributos' => ['cor' => 'preto', 'Office' => '2021', 'usuário' => 'adm.drh.e02', 'Windows' => '11', 'Serial Windows' => 'XXXX-YYYYY-ZZZZZ'],
+            'atributos' => [['atributo' => 'cor','valor' => 'preto'], ['atributo' => 'Office','valor' => '2021'], ['atributo' => 'usuário','valor' => 'adm.drh.e02'], ['atributo' => 'Windows','valor' => '11'], ['atributo' => 'Serial Windows','valor' => 'XXXX-YYYYY-ZZZZZ']],
         ],
         [
             'descricao' => 'Computador Concordia',
             'patrimonio' => '0003',
             'observacao' => 'Computador Concordia - adquirido em 2023',
-            'atributos' => ['cor' => 'preto', 'Office' => '2021', 'Windows' => '10', 'usuário' => 'adm.drh.e03', 'Situação' => 'Encaminhado para Manutenção'],
+            'atributos' => [['atributo' => 'cor','valor' => 'preto'], ['atributo' => 'Office','valor' => '2021'], ['atributo' => 'usuário','valor' => 'adm.drh.e03'], ['atributo' => 'Windows','valor' => '10'], ['atributo' => 'Situação','valor' => 'Encaminhado para manutenção']],
         ],
     ];
 
