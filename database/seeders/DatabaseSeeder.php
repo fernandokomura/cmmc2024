@@ -23,6 +23,5 @@ class DatabaseSeeder extends Seeder
         $this->call(SetorSeeder::class);
         $this->call(ParlamentarSeeder::class);
         $this->call(FuncionarioSeeder::class);
-        $this->call(EquipamentoSeeder::class);
     }
 }

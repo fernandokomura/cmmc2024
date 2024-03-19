@@ -63,6 +63,18 @@ class AdminPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
+            ->navigationGroups([
+                NavigationGroup::make('Câmara')
+                        ->label('Câmara')
+                        ->collapsed(true),
+                NavigationGroup::make('Parlamentar')
+                        ->label('Parlamentar')
+                        ->collapsed(true),
+                NavigationGroup::make('Segurança')
+                        ->label('Segurança')
+                        ->collapsed(true),
+
+            ])
             ->viteTheme('resources/css/filament/admin/theme.css');
     }
 }
