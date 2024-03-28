@@ -19,6 +19,7 @@ return new class extends Migration
             $table->boolean('suplente')->default(false);
             $table->string('formacao')->nullable();
             $table->string('nivel_intrucao')->nullable();
+            $table->longText('biografia')->nullable();
             $table->foreignUuid('partido_id')->nullable()->constrained('partidos_politicos')->nullOnDelete();
             $table->boolean('ativo')->default(true);
             $table->foreignUuid('setor_id')->nullable()->constrained('setores')->nullOnDelete();
